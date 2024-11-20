@@ -1,0 +1,16 @@
+﻿<Window x:Class="ATMApplication.User_Interface.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATMApplication.User_Interface"
+        mc:Ignorable="d"
+        Title="ATM Application" Height="400" Width="600">
+    <Grid>
+        <TextBlock Text="Account Number:" VerticalAlignment="Top" Margin="100,100,0,0" HorizontalAlignment="Left"/>
+        <TextBox Name="AccountNumberBox" VerticalAlignment="Top" Margin="200,100,0,0" HorizontalAlignment="Left" Width="200"/>
+        <TextBlock Text="Password:" VerticalAlignment="Top" Margin="100,130,0,0" HorizontalAlignment="Left"/>
+        <PasswordBox Name="PasswordBox" VerticalAlignment="Top" Margin="200,130,0,0" HorizontalAlignment="Left" Width="200"/>
+        <Button Content="Login" VerticalAlignment="Top" Margin="15,170,0,0" Click="LoginButton_Click" Width="100"/>
+    </Grid>
+</Window>
