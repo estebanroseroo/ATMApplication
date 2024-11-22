@@ -43,6 +43,13 @@ namespace ATMApplication.User_Interface
             {
                 account.Deposit(amount);
                 MessageBox.Show($"Deposited: {amount:C}", "Success");
+            } else
+            {
+                if (amount < 0)
+                {
+                    MessageBox.Show("Invalid amount.", "Error");
+                }
+                
             }
             UpdateInformation();
         }
@@ -56,7 +63,10 @@ namespace ATMApplication.User_Interface
             }
             else
             {
-                MessageBox.Show("Insufficient balance or invalid amount.", "Error");
+                if (amount < 0 || amount > account.Balance)
+                {
+                    MessageBox.Show("Insufficient balance or invalid amount.", "Error");
+                }
             }
             UpdateInformation();
         }
